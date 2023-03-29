@@ -62,6 +62,12 @@ def rang(largo, name):
         respuesta += name
     return respuesta
 
+
+@app.route('/hello/<string:renata>/<int:num>')
+def hello(renata, num):
+    return render_template('hello.html',renata= renata,num= num)
+
+
 # # app.run(debug=True) debería ser la última sentencia
 if __name__ == "__main__":   # Asegúrate de que este archivo se esté ejecutando directamente y no desde un módulo diferente
     app.run(debug=True)    # Ejecuta la aplicación en modo de depuración
